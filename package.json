@@ -1,0 +1,51 @@
+{
+  "name": "@autoscale/agent-express",
+  "version": "0.1.1",
+  "description": "Autoscale.app Agent middleware for Express",
+  "keywords": [
+    "autoscale",
+    "agent",
+    "middleware",
+    "express"
+  ],
+  "homepage": "https://autoscale.app",
+  "author": "Michael R. van Rooijen",
+  "license": "MIT",
+  "files": [
+    "CHANGELOG.md",
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/autoscale-app/node-agent-express"
+  },
+  "scripts": {
+    "lint": "ts-standard src && tsc --noEmit",
+    "format": "ts-standard src --fix",
+    "test": "jest --silent",
+    "build": "rm -rf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run lint && npm run test",
+    "release": "npm publish --access public && git push && git push --tags"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest": "^1.0.4",
+    "@types/connect": "^3.4.35",
+    "@types/express": "^4.17.16",
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "connect": "^3.7.0",
+    "express": "^4.18.2",
+    "jest": "^29.3.1",
+    "node-mocks-http": "^1.12.1",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
+    "ts-standard": "^12.0.2",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@autoscale/agent": "^0.3.0"
+  }
+}
