@@ -1,6 +1,6 @@
 {
   "name": "@autoscale/agent-express",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "description": "Autoscale.app Agent middleware for Express",
   "keywords": [
     "autoscale",
